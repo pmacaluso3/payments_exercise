@@ -1,0 +1,13 @@
+       Prefix Verb   URI Pattern                            Controller#Action
+loan_payments GET    /loans/:loan_id/payments(.:format)     payments#index {:format=>:json}
+              POST   /loans/:loan_id/payments(.:format)     payments#create {:format=>:json}
+ loan_payment GET    /loans/:loan_id/payments/:id(.:format) payments#show {:format=>:json}
+        loans GET    /loans(.:format)                       loans#index {:format=>:json}
+              POST   /loans(.:format)                       loans#create {:format=>:json}
+     new_loan GET    /loans/new(.:format)                   loans#new {:format=>:json}
+    edit_loan GET    /loans/:id/edit(.:format)              loans#edit {:format=>:json}
+         loan GET    /loans/:id(.:format)                   loans#show {:format=>:json}
+              PATCH  /loans/:id(.:format)                   loans#update {:format=>:json}
+              PUT    /loans/:id(.:format)                   loans#update {:format=>:json}
+              DELETE /loans/:id(.:format)                   loans#destroy {:format=>:json}
+      payment GET    /payments/:id(.:format)                payments#show
