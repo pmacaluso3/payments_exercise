@@ -5,7 +5,7 @@ class LoansController < ApplicationController
   end
 
   def index
-    render json: Loan.all
+    render json: Loan.all.as_json(include: :outstanding_balance)
   end
 
   def show
